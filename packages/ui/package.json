@@ -1,0 +1,66 @@
+{
+  "name": "@wenerme/node-yarn-starter-ui",
+  "version": "1.0.1-alpha.1",
+  "description": "Yarn2 node starter template project - ui module",
+  "keywords": [
+    "starter",
+    "template"
+  ],
+  "homepage": "https://github.com/wenerme/node-yarn-starter#readme",
+  "bugs": {
+    "url": "https://github.com/wenerme/node-yarn-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenerme/node-yarn-starter.git",
+    "directory": "packages/ui"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "wener",
+    "email": "wenermail@gmail.com",
+    "url": "https://wener.me"
+  },
+  "main": "./index.js",
+  "files": [
+    "index.*",
+    "tsconfig.json",
+    "lib",
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "build:storybook": "build-storybook -c .storybook -o storybook",
+    "dev": "tsc --watch --listEmittedFiles --project tsconfig.build.json",
+    "storybook:dev": "start-storybook -p ${PORT:-6006} --ci",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6",
+    "@storybook/addon-knobs": "^6",
+    "@storybook/addon-links": "^6",
+    "@storybook/addon-storyshots": "^6",
+    "@storybook/addon-storysource": "^6",
+    "@storybook/addons": "^6",
+    "@storybook/react": "^6",
+    "@storybook/source-loader": "^6",
+    "@types/jest": "^25",
+    "@types/react": "^16",
+    "@types/react-dom": "^16",
+    "core-js": "^3",
+    "jest": "^26",
+    "react": "^16",
+    "react-dom": "^16",
+    "react-test-renderer": "^16",
+    "ts-jest": "^26",
+    "typescript": "^3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "engines": {
+    "node": "12"
+  }
+}
